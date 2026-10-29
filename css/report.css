@@ -1,0 +1,31 @@
+/* ── Report page layout ── */
+.report-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 32px;
+    font-family: Arial, sans-serif;
+}
+
+/* ── Section headings ── */
+.section-heading {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ea7d00;
+    font-family: Arial, sans-serif;
+    border-bottom: 2px solid #ffc46b;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+/* ── Section content box ── */
+.section-content {
+    background-color: #fff8f0;
+    border: 1px solid #ffd9b3;
+    border-radius: 12px;
+    padding: 20px 28px;
+    font-size: 15px;
+    color: #444;
+    line-height: 1.7;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Hospitalised Injury Trends in Australia</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+
+    <script src="js/line-graph.js"></script>
+    <script src="js/motorcyclist-bar-chart.js"></script>
+    <script src="js/pedal-cyclist-bar-chart.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/graphs.css">
+</head>
+
+<body>
+    <nav>
+        <header>
+            <h1>National Hospitalised Injury Trends in Australia Data Visualisation</h1>
+            <h2> Chaeyoon Hyun, 105330980 | Adonias Pedro, 104463681</h2>
+            <h3> COS30045, Data Visualisation</h3>
+            <div class="button-group">
+                <button id="btn1" onclick="window.location.href='index.html'">Home</button>
+                <button id="btn2" onclick="window.location.href='report.html'">Key Findings & Data Dictionary</button>
+            </div>
+        </header>
+    </nav>
+
+    <!-- Line chart -->
+    <div class="line-chart-wrapper">
+        <div id="line-chart-legend"></div>
+        <div id="line-chart"></div>
+    </div>
+
+    <!-- Line chart detail pill — centred under chart -->
+    <div class="line-details-wrapper">
+        <div>
+            <div id="line-chart-details">
+                The line chart shows how many male and female drivers between the ages 40 and 64 
+                were injured in car accidents in Australia from 2011 through 2020.
+                Users of the chart can compare male and female drivers' injuries over time and see 
+                when the number of car related injuries changed such as increased, decreased, 
+                or remained unchanged in terms of hospitalisation rates. 
+                With the information presented interactively with tooltips and graphic comparisons, 
+                the statistics about vehicle related injuries become clearer to all members of society.
+            </div>
+        </div>
+    </div>
+
+    <!-- Bar charts side by side -->
+    <div class="bar-charts-wrapper">
+        <div id="motorcyclist-bar-chart"></div>
+        <div id="pedal-cyclist-bar-chart"></div>
+    </div>
+
+    <!-- Bar chart detail pills — each centred under its chart -->
+    <div class="bar-details-wrapper">
+        <div>
+            <div id="motorcyclist-chart-details">
+                From 2011 to 2019, Australia saw a gradual increase in both male and 
+                female values, with male figures rising from 2.35 to 2.95 and female 
+                figures from 35 to 46, before a slight dip in 2020 and a partial 
+                recovery in 2021. Notably, female values consistently remained 
+                significantly higher than male values across all years, maintaining 
+                a gap of roughly 30 to 40 units.
+            </div>
+        </div>
+        <div>
+            <div id="pedal-cyclist-chart-details">
+                This bar chart compares the number of hospitalised injuries among male 
+                and female pedal cyclists aged 40–64 in Australia between 2011 and 2021. 
+                By displaying the yearly injury counts side by side and providing 
+                interactive tooltips, the visualisation allows users to easily compare 
+                gender differences and observe how pedal cyclist hospitalisations have 
+                changed over time.
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>2026, Chaeyoon Hyun & Adonias Pedro</p>
+    </footer>
+
+</body>
+</html>

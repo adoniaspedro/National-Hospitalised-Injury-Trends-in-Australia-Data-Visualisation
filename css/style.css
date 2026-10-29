@@ -1,0 +1,138 @@
+html {
+	height: 100%;
+	background-color: #faebdd;
+}
+
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+}
+
+/* Decorate the nav bar */
+nav {
+	background: linear-gradient(90deg, #ffd9b3, #ffc46b, #ffd9b3);
+	background-size: 200% 200%;
+	animation: navGradient 8s ease infinite;
+	padding: 12px 24px;
+	box-shadow: 0 4px 12px rgba(255, 166, 0, 0.30);
+	border-radius: 0 0 16px 16px;
+	margin-bottom: 24px;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	gap: 18px;
+}
+
+nav a {
+	text-decoration: none;
+	color: #663300;
+	font-weight: 600;
+	padding: 10px 16px;
+	border-radius: 12px;
+	transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+	animation: navGradient 8s ease infinite;
+}
+
+nav a:hover,
+nav a:focus {
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #bf5600;
+	transform: translateY(-1px);
+}
+
+/* Center all headings */
+h1, h2, h3 {
+	text-align: center;
+	margin-top: 1px;
+	font-family: dejaVu sans, sans-serif;
+	color: #ea7d00;
+}
+
+h2 {
+	margin-top: -10px;
+}
+
+h3 {
+	margin-top: -10px;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.button-group {
+	display: flex;
+	gap: 15px;
+	margin-top: 10px;
+}
+
+#btn1, #btn2 {
+	background-color: #ff8800;
+	color: rgb(255, 255, 255);
+	border: none;
+	border-radius: 8px;
+	padding: 10px 20px;
+	font-size: 20px;
+	font-weight: 549;
+	box-shadow: 0 12px 24px rgba(247, 147, 8, 0.45);
+	text-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+#btn1:hover, #btn2:hover {
+	background-color: #ff9900;
+		box-shadow: 0 14px 28px rgba(247, 147, 8, 0.55);
+}
+
+#btn1 {
+	margin-left: 0;
+}
+
+#btn2 {
+	margin-left: 0;
+}
+
+footer {
+	text-align: center;
+	padding: 12px 0;
+	background: linear-gradient(90deg, #ffd9b3, #ffc46b, #ffd9b3);
+	background-size: 200% 200%;
+	animation: footerGradient 8s ease infinite;
+	color: #663300;
+	font-family: Arial, sans-serif;
+	margin-top: 13px;
+	border-top: 1px solid #ffc46b;
+}
+
+li {
+	color: inherit;
+}
+li::marker {
+	color: #ff8000;
+}
+
+/* Define keyframes for the gradient animation on the nav bar and footer */
+@keyframes footerGradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+/* Define keyframes for the gradient animation on the nav bar and footer */
+@keyframes navGradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}

@@ -1,0 +1,241 @@
+#name-chart,
+#bar-chart {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto 24px;
+	max-width: 100%;
+}
+
+#line-chart {
+	flex: 1;
+	min-width: 800px;
+}
+
+#line-chart svg,
+#bar-chart svg {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+}
+
+.line-chart-wrapper {
+    display: flex;
+    flex-direction: row; /* force horizontal layout */
+    align-items: flex-start;  /* vertically center legend + chart */
+    justify-content: space-between;
+    gap: 24px;
+    margin: 0 auto 24px;
+    max-width: 1200px;
+    padding: 0 16px;
+}
+
+/* LEFT LEGEND */
+#line-chart-legend {
+    min-width: 180px;
+	margin-left: -100px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9d2a2;
+    font-family: Arial, sans-serif;
+    align-self: center;
+    order: 0;
+}
+
+/* CHART CENTER */
+.line-chart-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 1;
+}
+
+/* optional: ensure chart doesn't shrink */
+#line-chart {
+	flex: 1;
+    width: 100%;
+}
+
+/* Legend item styling */
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Color box for legend */
+.legend-color {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+/* ── Line chart detail panel ──────────────────────────────────────────
+   Wrapper centres the pill under the line chart using flexbox
+   Inner div takes 60% width so pill aligns under chart not full page  */
+.line-details-wrapper {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.line-details-wrapper > div {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
+
+/* Specific colors for legend items */
+#line-chart-details {
+    width: 600px;
+    height: 130px;
+    margin: -8px auto 8px;
+    min-width: 10px;
+    min-height: 38px;
+    padding: 0 22px;
+    border-radius: 999px;
+    background: #ffa011;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 549;
+    box-shadow: 0 12px 24px rgba(247, 147, 8, 0.45);
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Bar charts row layout ── */
+.bar-charts-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* ── Motorcyclist bar chart ── */
+#motorcyclist-bar-chart {
+    position: relative;
+    width: 50%;
+    margin-top: 32px;
+    box-sizing: border-box;
+    padding-right: 16px;
+}
+
+#motorcyclist-bar-chart svg {
+    display: block;
+    width: 100%;
+    overflow: visible;
+}
+
+.mc-chart-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ea7d00;
+    font-family: Arial, sans-serif;
+    margin-bottom: 8px;
+    margin-left: 70px;
+    text-align: left;
+}
+
+.motorcyclist-legend {
+    display: flex;
+    gap: 16px;
+    margin: 0 0 10px 70px;
+}
+
+.mc-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #555;
+    font-family: Arial, sans-serif;
+}
+
+.mc-legend-swatch {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+#motorcyclist-tooltip {
+    position: absolute;
+    background: #222;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    padding: 6px 10px;
+    border-radius: 3px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+/* ── Bar detail panels row — mirrors bar-charts-wrapper ──────────────
+   Each child div takes 50% width so pills align under their chart
+   justify-content: center automatically finds the middle of each half  */
+.bar-details-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* wrapper children each take 50% so pills align under their chart */
+.bar-details-wrapper > div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    box-sizing: border-box;
+}
+
+#motorcyclist-chart-details,
+#pedal-cyclist-chart-details {
+    width: 500px;
+    height: 120px;
+    margin: 8px auto;
+    min-width: 10px;
+    min-height: 38px;
+    padding: 0 22px;
+    border-radius: 999px;
+    background: #ffa011;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 549;
+    box-shadow: 0 12px 24px rgba(247, 147, 8, 0.45);
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Bar colours — must use fill not background ── */
+.bar-male { fill: #cc5500 !important; }
+.bar-female { fill: #add8e6 !important; }
+.bar-male:hover, .bar-female:hover { opacity: 0.75; cursor: pointer; }
+
+/* ── Pedal cyclist bar chart ── */
+#pedal-cyclist-bar-chart {
+    position: relative;
+    width: 50%;
+    margin-top: 32px;
+    box-sizing: border-box;
+    padding-left: 16px;
+}
